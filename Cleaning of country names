@@ -1,0 +1,39 @@
+#Cleaning Countries from accounts
+
+for(i in 1:length(acc$Country)){
+   if(is.na(acc$Country[i])) {acc$CountryCode[i] <- "NA"
+ } else {s1<-which(CountryCodes$Country %in% acc$Country[i])
+     acc$CountryCode[i]<-CountryCodes$Code[s1]
+ }}
+ 
+acc$Country[which(acc$Country == "Bavaria")]<-"Germany"
+acc$Country[which(acc$Country == "Macedonia, The Former Yugoslav Republic")]<-"Macedonia, Republic of" 
+acc$Country[which(acc$Country == "Virgin Islands, British")] <- "British Virgin Islands"
+acc$Country[which(acc$Country == "M\u009allmeier")]<-"Germany"
+acc$Country[which(acc$Country == "Espana")]<-"Spain"
+acc$Country[which(acc$Country == "FRANCE")]<-"France"
+acc$Country[which(acc$Country == "M\u008exico")]<-"Mexico"
+acc$Country[which(acc$Country == "England United Kingdom")]<-"United Kingdom"
+acc$Country[which(acc$Country == "Seitzerland")]<-"Switzerland"
+acc$Country[which(acc$Country == "Jersey + The Netherlands")]<-"Jersey"
+acc$Country[which(acc$Country == "France (Living in Qatar)")]<-"France"
+acc$Country[which(acc$Country == "Britain")]<-"United Kingdom"
+acc$Country[which(acc$Country == "Soithafrica & Germany")]<-"Southafrica"
+acc$Country[which(acc$Country == "Great Britain.")]<-"United Kingdom"
+acc$Country[which(acc$Country == "Switzerland/Ireland")]<-"Switzerland"
+acc$Country[which(acc$Country == "Korea, Democratic People's Republic of")]<-"Korea (North)"
+acc$Country[which(acc$Country == "(Sunny) South Africa")]<-"south Africa"
+acc$Country[which(acc$Country == "Switzerland / Portugal")]<-"Switzerland"
+acc$Country[which(acc$Country == "germany")]<-"Germany"
+acc$Country[which(acc$Country == "Nederland" )]<-"Netherland"
+acc$Country[which(acc$Country == "Deutschland" )]<-"Germany"
+acc$Country[which(acc$Country == "Schweiz" )]<-"Switzerland"
+acc$Country[which(acc$Country == "APO in Germany" )]<-"Germany"
+acc$Country[which(acc$Country == "United kingdom" )]<-"United Kingdom"
+acc$Country[which(acc$Country == "france" )]<-"France"
+acc$Country[which(acc$Country == "England" )]<-"United Kingdom"
+acc$Country[which(acc$Country == "Syrian Arab Republic" )]<- "Syrian Arab Republic (Syria)"
+acc$Country[which(acc$Country == "United States of America" )]<- "United States"
+acc$Country[which(acc$Country == "South Georgia and The South Sandwich Isl")]<-"South Georgia and the South Sandwich Islands"
+acc$Country[which(acc$Country == "Macao")] <- "Macao, SAR China"
+acc$Country[which(acc$Country == "Southafrica")] <- "South Africa"
